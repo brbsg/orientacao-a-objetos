@@ -10,11 +10,22 @@ public class Forca {
 	
 	//================================================================================
 	
+	static void gerarThemes(){
+		for(int i=0;i<10;i++) {
+			var actual = new Theme("Tema" + i);
+			themeArr.add(actual);
+	    }
+		for(int i=0;i<10;i++) {
+			themeArr.get(i).words.add("Palavra" + i);
 	
+	    }
+	}
 
 	//================================================================================
 	
 	public static void main(String[] args) {
+		gerarThemes();
+		
 		Scanner scan = new Scanner(System.in);
 		
 		boolean exit = false;
@@ -36,7 +47,7 @@ public class Forca {
 					break;
 				//======================================
 				case "2":
-					
+					manageWords();
 					break;
 				//======================================	
 				case "3":
@@ -68,6 +79,7 @@ public class Forca {
 		System.out.println("1.Cadastro");
 		System.out.println("2.Exclusão");
 		System.out.println("3.Busca");
+		System.out.println("4.Listagem");
 		
 		
 		
@@ -78,78 +90,38 @@ public class Forca {
 				
 				boolean exit1 = false;
 				
-				while(!exit1) {
-					System.out.println("Digite um tema ou pressione 0 para sair.");
-					String themeScan  = scan.nextLine();
-					
-					if(themeScan.equals("0")) {
-						exit1 = true;
-					}else if(themeArr.size() <= 50 && !themeScan.equals("")) {
-						boolean repeated = false;
-						
-						for(int i=0;i<themeArr.size();i++) {
-							if(themeArr.get(i).title.equals(themeScan)) {
-								repeated = true;
-							}
-						}
-						
-						if(!repeated) {
-							var actual = new Theme(themeScan);
-							themeArr.add(actual);
-						}else {
-							System.out.println("Esse tema já existe. Digite um tema novo!!!");
-						}
-					}
-				}
-				
-				break;
-			//======================================
-			case "2":
-				
-				boolean exit2 = false;
-				
-				while(!exit2) {
-					String themeScan  = scan.nextLine();
-					System.out.println("Digite um tema a ser excluído ou pressione 0 para sair.");
-					
-					if(themeScan.equals("0")) {
-						exit2 = true;
-					}else if(themeArr.size() <= 50 && !themeScan.equals("")) {
-						boolean founded = false;
-						
-						for(int i=0;i<themeArr.size();i++) {
-							if(themeArr.get(i).title.equals(themeScan)) {
-								themeArr.remove(i);
-								
-								founded = true;
-							}
-						}
-						
-						if(!founded) {
-							System.out.println("“Não foi possível excluir o tema. Verifique se existem palavras cadastradas nesse tema!!!");
-						}
-					}
-				}
-				
-				break;
-			//======================================	
-			case "3":
-				
-				boolean exit3 = false;
-				
-				System.out.println("Lista de Temas");
+				System.out.println("Escolha um tema ou pressione 0 para sair.");
 				
 				for(int i=0;i<themeArr.size();i++) {
 					System.out.print(i + ".");
 					System.out.println(themeArr.get(i).title);
 				}
 				
-				
 				String themeScan  = scan.nextLine();
-				System.out.println("Pressione 0 para sair.");
 				
-				if(themeScan.equals("0")) {exit3 = true;}
-				while(!exit3) {}
+				while(!exit1) {
+					System.out.print("Adicionando palavras ao tema:");
+					System.out.println(themeArr.get(Integer.parseInt(themeScan)).title);
+					System.out.println("Digite 0 para sair.");
+					
+					String wordScan  = scan.nextLine();
+					
+					themeArr.get(Integer.parseInt(themeScan)).words.add(wordScan);
+					
+					if(wordScan.equals("0")) {exit1 = true;}
+					
+				}
+				
+				break;
+			//======================================
+			case "2":
+				
+				
+				
+				break;
+			//======================================	
+			case "3":
+				
 				
 				break;
 			//======================================
