@@ -1,0 +1,15 @@
+package model;
+
+public class Venda {
+	private int idCliente;
+	private int idFuncionario;
+	
+	private int valorVenda;
+	private int quantidade;
+
+	public Venda(String nomeVendido, int valorVenda, int quantidade) {
+		this.nomeVendido = nomeVendido;
+		this.valorVenda = valorVenda;
+		this.quantidade = quantidade;
+	}
+}

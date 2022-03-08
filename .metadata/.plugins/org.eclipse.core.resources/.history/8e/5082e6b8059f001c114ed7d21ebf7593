@@ -1,0 +1,16 @@
+package model;
+
+public class Sapato {
+	public String tipo;
+	public String tamanho;
+
+	public Sapato(int idProduto, String tipo, String formato, String cor, int preco, String tamanho, String marca) {
+		this.idProduto = idProduto;
+		this.tipo = tipo;
+		this.formato = formato;
+		this.cor = cor;
+		this.preco = preco;
+		this.tamanho = tamanho;
+		this.marca = marca;
+	}
+}

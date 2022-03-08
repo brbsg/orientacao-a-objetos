@@ -1,0 +1,14 @@
+package model;
+
+public class Funcionario {
+	public int idFuncionario;
+	public int salario;
+	public String dataIngresso;
+
+	public Funcionario(int idFuncionario, int salario, String dataIngresso) {
+		this.idFuncionario = idFuncionario;
+		this.salario = salario;
+		this.dataIngresso = dataIngresso;
+	}
+
+}

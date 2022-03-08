@@ -1,0 +1,13 @@
+
+public class Cliente {
+	public String idClient;
+	public int valorGasto;
+	public String favoritos;
+	
+	public Cliente(String idClient,int valorGasto, String favoritos) {
+		this.idClient = idCliente;
+		this.valorGasto=valorGasto;
+		this.favoritos=favoritos;
+	}
+	
+}

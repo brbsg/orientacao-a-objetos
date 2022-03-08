@@ -1,0 +1,13 @@
+package model;
+
+import java.util.ArrayList;
+
+public class Loja {
+	private String nomeLoja;
+	private String endereco;
+	private String cnpj;
+	private ArrayList<Cliente> listaClientes= new ArrayList<Cliente>();
+	private ArrayList<Funcionario> listaClientes= new ArrayList<Funcionario>();
+	
+
+}

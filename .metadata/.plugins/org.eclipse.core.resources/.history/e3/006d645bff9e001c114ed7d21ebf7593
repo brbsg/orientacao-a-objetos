@@ -1,0 +1,13 @@
+
+public class Funcionario {
+	public String idCliente;
+	public int valorGasto;
+	public String favoritos;
+	
+	public Funcionario(String idCliente,int valorGasto, String favoritos) {
+		this.idCliente = idCliente;
+		this.valorGasto=valorGasto;
+		this.favoritos=favoritos;
+	}
+	
+}

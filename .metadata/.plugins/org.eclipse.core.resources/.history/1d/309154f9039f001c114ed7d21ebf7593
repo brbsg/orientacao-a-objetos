@@ -1,0 +1,14 @@
+package model;
+
+public class Cliente extends Pessoa {
+	private int idCliente;
+	private int valorGasto;
+	private String favoritos;
+
+	public Cliente(int idCliente, int valorGasto, String favoritos) {
+		this.idCliente = idCliente;
+		this.valorGasto = valorGasto;
+		this.favoritos = favoritos;
+	}
+
+}

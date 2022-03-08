@@ -1,0 +1,22 @@
+
+public class Sapato {
+	public int idProduto;
+	public String tipo;
+	public String formato;
+	public String cor;
+	public int preco;
+	public String tamanho;
+	public String marca;
+	
+	
+	public Sapato(int idProduto,String tipo, int quantidade) {
+		this.nomeVendido = nomeVendido;
+		this.valorVenda=valorVenda;
+		this.quantidade=quantidade;
+		this.quantidade=quantidade;
+		this.quantidade=quantidade;
+		this.quantidade=quantidade;
+		this.quantidade=quantidade;
+		this.quantidade=quantidade;
+	}
+}

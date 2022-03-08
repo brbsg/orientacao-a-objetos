@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/home/gustavo/Documentos/UnB/OO/LojaDeRoupaEAcessoriosUsados/.metadata/.plugins/org.eclipse.jdt.core
+1672506568.index
+3111361603.index

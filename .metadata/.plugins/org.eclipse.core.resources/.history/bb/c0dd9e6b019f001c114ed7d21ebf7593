@@ -1,0 +1,22 @@
+
+public class Oculos {
+	public class Sapato {
+		public int idProduto;
+		public String cor;
+		public String formato;
+		public int preco;
+		public String tamanho;
+		public String marca;
+		
+		
+		public Sapato(int idProduto,String tipo,String formato,String cor,int preco,String tamanho,String marca) {
+			this.idProduto = idProduto;
+			this.tipo=tipo;
+			this.formato=formato;
+			this.cor=cor;
+			this.preco=preco;
+			this.tamanho=tamanho;
+			this.marca=marca;
+		}
+	}
+}

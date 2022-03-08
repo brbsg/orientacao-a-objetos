@@ -1,0 +1,12 @@
+
+public class Venda {
+	public String nomeVendido;
+	public int valorVenda;
+	public int quantidade;
+
+	public Venda(String nomeVendido, int valorVenda, int quantidade) {
+		this.nomeVendido = nomeVendido;
+		this.valorVenda = valorVenda;
+		this.quantidade = quantidade;
+	}
+}

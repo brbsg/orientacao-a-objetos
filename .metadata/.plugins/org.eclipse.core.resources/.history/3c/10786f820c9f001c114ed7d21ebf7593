@@ -1,0 +1,12 @@
+package aplication;
+import model.Loja;
+
+public class Main {
+	public static void main(String[] args ) {
+		Loja loja = new Loja();
+		
+		Sapato sapato1 = newSapato(1,"Nike vapormax","vermelho","corrida", "Nike",100000,40 )
+		
+		
+	}
+}
