@@ -3,23 +3,18 @@ package products;
 import model.Produto;
 
 public class Adorno extends Produto{
-	private String tamanho;
+
 	private String material;
 	private String joia;
 	
-	public Adorno(int idProduto, String nome, String cor, String categoria, String marca, int preco, String tamanho,
+	
+	
+	
+	public Adorno(int idProduto, String nome, String cor, String categoria, String marca, String tamanho, int preco,
 			String material, String joia) {
-		super(idProduto, nome, cor, categoria, marca, preco);
-		this.tamanho = tamanho;
+		super(idProduto, nome, cor, categoria, marca, tamanho, preco);
 		this.material = material;
 		this.joia = joia;
-	}
-	
-	public String getTamanho() {
-		return tamanho;
-	}
-	public void setTamanho(String tamanho) {
-		this.tamanho = tamanho;
 	}
 	public String getMaterial() {
 		return material;

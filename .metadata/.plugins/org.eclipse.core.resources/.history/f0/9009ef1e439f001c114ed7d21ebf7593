@@ -1,0 +1,66 @@
+package aplication;
+import model.Loja;
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class App {
+	public static void main(String[] args ) {
+		Loja loja = new Loja("Lojinha da Esquina","Vicente Pires", "86.896.436-0001-89");
+		
+Scanner scan = new Scanner(System.in);
+		
+		boolean exit = false;
+		
+		while(!exit) {
+			System.out.println("----------------- Jogo Da Forca -----------------");
+			System.out.println("1.Gerenciar Temas"); 
+			System.out.println("2.Gerenciar Palavras");
+			System.out.println("3.Jogar");
+			System.out.println("4.Sair");
+			System.out.print("Opção: ");
+			
+			String sel = scan.nextLine();
+			
+			switch(sel) {
+				case "1":
+					manageThemes();
+					
+					break;
+				//======================================
+				case "2":
+					manageWords();
+					break;
+				//======================================	
+				case "3":
+					
+					break;
+				//======================================
+				case "4":
+					
+					exit = true;
+					break;
+				//======================================
+	
+	
+				default:
+					exit = true;
+				
+			}
+		}
+		
+		
+		scan.close();
+    	System.out.print("\n\n ----------------- Sistema Encerrado ----------------- \n\n");
+	}
+		
+		
+////		Sapato sapato1 = new Sapato(
+//		);		
+////
+////		Venda venda1 = new Venda();
+////		
+////		venda1.adicionaProduto(sapato1);
+	}
+}

@@ -1,0 +1,19 @@
+package aplication;
+import model.Loja;
+import model.Venda;
+import products.Sapato;
+
+public class App {
+	public static void main(String[] args ) {
+		Loja loja = new Loja("Lojinha da Esquina","Vicente Pires", "86.896.436-0001-89");
+		
+		
+		
+////		Sapato sapato1 = new Sapato(
+//		);		
+////
+////		Venda venda1 = new Venda();
+////		
+////		venda1.adicionaProduto(sapato1);
+	}
+}

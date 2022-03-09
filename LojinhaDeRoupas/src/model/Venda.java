@@ -8,10 +8,7 @@ public class Venda  {
 	private int valorTotal;
 	private ArrayList<Produto> listaProdutos= new ArrayList<Produto>();
 	
-	
-	public Venda() {
-		
-	}
+
 	
 	public Venda(int idCliente, int idFuncionario) {
 

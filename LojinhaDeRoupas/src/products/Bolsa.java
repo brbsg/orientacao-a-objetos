@@ -3,31 +3,23 @@ package products;
 import model.Produto;
 
 public class Bolsa extends Produto{
-	private String modelo;
-	private String tamanho;
+	private String material;
 	
-	public Bolsa(int idProduto, String nome, String cor, String categoria, String marca, int preco, String modelo,
-			String tamanho) {
-		super(idProduto, nome, cor, categoria, marca, preco);
-		this.modelo = modelo;
-		this.tamanho = tamanho;
+	public Bolsa(int idProduto, String nome, String cor, String categoria, String marca, String tamanho, int preco,
+			String material) {
+		super(idProduto, nome, cor, categoria, marca, tamanho, preco);
+		this.material = material;
 	}
 
-	public String getModelo() {
-		return modelo;
+	public String getMaterial() {
+		return material;
 	}
 
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
+	public void setMaterial(String material) {
+		this.material = material;
 	}
 
-	public String getTamanho() {
-		return tamanho;
-	}
-
-	public void setTamanho(String tamanho) {
-		this.tamanho = tamanho;
-	}
+	
 	
 	
 	

@@ -1,19 +1,22 @@
 package model;
 
-public  class Produto {
+public abstract class Produto {
 	private int idProduto;
 	private String nome;
 	private String cor;
-	private String categoria;
 	private String marca;
+	private String tamanho;
 	private int preco;
 	
-	public Produto(int idProduto,String nome, String cor, String categoria, String marca, int preco) {
-		
+	
+
+	public Produto(int idProduto, String nome, String cor, String categoria, String marca, String tamanho, int preco) {
+		super();
 		this.idProduto = idProduto;
+		this.nome = nome;
 		this.cor = cor;
-		this.categoria = categoria;
 		this.marca = marca;
+		this.tamanho = tamanho;
 		this.preco = preco;
 	}
 
@@ -37,14 +40,6 @@ public  class Produto {
 		this.cor = cor;
 	}
 
-	public String getCategoria() {
-		return categoria;
-	}
-
-	public void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-
 	public String getMarca() {
 		return marca;
 	}
@@ -59,7 +54,16 @@ public  class Produto {
 
 	public void setPreco(int preco) {
 		this.preco = preco;
+	}
+
+	public String getTamanho() {
+		return tamanho;
+	}
+
+	public void setTamanho(String tamanho) {
+		this.tamanho = tamanho;
 	} 
+	
 	
 	
 	
