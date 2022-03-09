@@ -1,0 +1,12 @@
+package model;
+
+public class Oculos {
+
+	
+		private String formato;
+		private String tamanho;
+
+
+		
+	
+}
