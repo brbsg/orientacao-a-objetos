@@ -7,7 +7,6 @@ public class Carteira extends Produto{
 
 	public Carteira(int idProduto, String nome, String cor, String categoria, String marca, int preco, String tamanho) {
 		super(idProduto, nome, cor, categoria, marca, preco);
-		
 		this.tamanho = tamanho;
 	}
 
