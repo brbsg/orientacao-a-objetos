@@ -1,15 +1,32 @@
 package aplication;
-import model.Loja;
+import java.awt.*;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Scanner;
+import javax.swing.*;
 
 public class App {
-	public static Scanner scan = new Scanner(System.in);
+
 	
 	public static void main(String[] args ) {
-		Loja loja = new Loja("Lojinha da Esquina","Vicente Pires", "86.896.436/0001-89");
+		Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
+		int width = (int)size.getWidth();
+        int height = (int)size.getHeight();
+		
+		
+		JFrame frame = new JFrame("Lojinha da Esquina");
+		
+		frame.setSize(width,height);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel header = new JPanel();
+		header.setBackground(Color.decode("#666666"));
+		header.setBounds(20, 20, 20, 20);
+		
+		
+		
+		frame.add(header);	
+		
+		frame.setVisible(true);
 	}
 	
 }
+ 
