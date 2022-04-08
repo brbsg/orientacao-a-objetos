@@ -1,0 +1,84 @@
+package model;
+
+public class Sale {
+    private double valorFinal;
+    private String name, nomeLente, nomeCliente, nomeArmacao, nomeFuncionario;
+    private int idVenda;
+
+    public String getApelidoVenda() {
+        return name;
+    }
+
+    public void setApelidoVenda(String apelidoVenda) {
+        this.name = apelidoVenda;
+    }
+
+    public int getIdVenda() {
+        return idVenda;
+    }
+
+    public void setIdVenda(int idVenda) {
+        this.idVenda = idVenda;
+    }
+
+    public double getValorFinal() {
+        return valorFinal;
+    }
+
+    public void setValorFinal(double valorFinal) {
+        this.valorFinal = valorFinal;
+    }
+
+    public String getNomeLente() {
+        return nomeLente;
+    }
+
+    public void setNomeLente(String nomeLente) {
+        this.nomeLente = nomeLente;
+    }
+
+    public String getNomeCliente() {
+        return nomeCliente;
+    }
+
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
+    }
+
+    public String getNomeArmacao() {
+        return nomeArmacao;
+    }
+
+    public void setNomeArmacao(String nomeArmacao) {
+        this.nomeArmacao = nomeArmacao;
+    }
+
+    public String getNomeFuncionario() {
+        return nomeFuncionario;
+    }
+
+    public void setNomeFuncionario(String nomeFuncionario) {
+        this.nomeFuncionario = nomeFuncionario;
+    }
+
+    public Sale(double valorFinal, String idCliente, String idFuncionario, String idArmacao, String apelidoVenda,
+            String idLente, int idVenda) {
+        this.valorFinal = valorFinal;
+        this.nomeCliente = idCliente;
+        this.nomeFuncionario = idFuncionario;
+        this.nomeArmacao = idArmacao;
+        this.name = apelidoVenda;
+        this.nomeLente = idLente;
+        this.idVenda = idVenda;
+    }
+
+    // metodo de busca
+    public boolean buscaVendaID(int vendaidbuscado) {
+
+        if (idVenda == vendaidbuscado)
+            return true;
+        else
+            return false;
+    }
+
+}

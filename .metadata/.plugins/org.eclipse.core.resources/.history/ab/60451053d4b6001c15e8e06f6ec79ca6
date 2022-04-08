@@ -1,0 +1,51 @@
+package controller;
+
+import model.Sale;
+
+public class SaleController {
+
+    private Sale[] vendas;
+    private int qntVendas;
+
+    public SaleController(DataController d) {
+        vendas = d.getVendas();
+        qntVendas = d.getQntVendas();
+    }
+
+    public String[] getApelidoVenda() {
+        String[] apelido = new String[qntVendas];
+        for (int i = 0; i < qntVendas; i++) {
+            apelido[i] = vendas[i].getName();
+        }
+        return apelido;
+    }
+
+    public double getValorFinal(int i) {
+        return vendas[i].getValue();
+    }
+
+    public int getQntVendas() {
+        return qntVendas;
+    }
+
+    public String getApelidoVenda(int i) {
+        return vendas[i].getName();
+    }
+
+    public String getIdLente(int i) {
+        return vendas[i].getNomeLente();
+    }
+
+    public String getIdCliente(int i) {
+        return vendas[i].getNomeCliente();
+    }
+
+
+    public String getIdFuncionario(int i) {
+        return vendas[i].getNomeFuncionario();
+    }
+
+    public int getIdVenda(int i) {
+        return vendas[i].getIdSale();
+    }
+}

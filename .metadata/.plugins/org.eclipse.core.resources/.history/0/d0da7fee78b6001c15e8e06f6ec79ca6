@@ -1,0 +1,16 @@
+package model;
+
+public class Employee extends Person {
+	private double salary;
+	private String address;
+	
+
+	public Employee(String name,String address, double salary,String cPF, int numID,Telefone numTel) {
+		super(name, numID, cPF, numTel);
+		this.salary = salary;
+		this.address = address;
+	} 
+
+	
+	
+}

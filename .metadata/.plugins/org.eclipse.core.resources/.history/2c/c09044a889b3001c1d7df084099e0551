@@ -1,0 +1,79 @@
+package view;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import controle.*;
+
+//
+//frame.setSize(width,height);
+//frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//
+//JPanel container = new JPanel();
+//container.setBackground(Color.decode("#eeeeee"));
+//
+//JPanel header = new JPanel() {
+//	 @Override
+//	  public Dimension getPreferredSize() {
+//	    return new Dimension(width, 60);
+//	  }
+//};
+//header.setBackground(Color.decode("#666"));
+//header.setBounds(0, 0,200,200);
+//
+//
+//container.add(header);
+//
+//frame.add(container);
+//
+//frame.setVisible(true);
+//	Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
+//	int width = (int)size.getWidth();
+//  int height = (int)size.getHeight();
+
+public class MenuScreen implements ActionListener {
+
+	
+	private static JFrame frame = new JFrame("Lojinha da Esquina");
+	private static JLabel title = new JLabel("Menu Principal");
+	private static JButton button = new JButton("Cliente");
+	
+	
+	public MenuScreen() {
+		title.setFont(new Font("Arial", Font.BOLD,20));
+		title.setForeground(Color.decode("#666"));
+		title.setBounds(140, 20, 200, 30);
+		
+		button.setBounds(140, 250, 160, 30);
+		button.setBackground(Color.decode("#666"));
+		button.setForeground(Color.decode("#FFFFFF"));
+		button.setFocusPainted(false);
+		
+		
+		frame.setLayout(null);
+		frame.add(title);
+		frame.add(button);
+		
+		frame.setSize(450,400);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setLocationRelativeTo(null);
+	}
+	
+	public static void main(String[] args ) {
+		MenuScreen menu = new MenuScreen();
+		
+		button.addActionListener(menu);
+		
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object src = e.getSource();
+		if(src == button) {
+			
+		}
+		
+	}
+	
+}

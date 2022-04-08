@@ -1,0 +1,81 @@
+package model;
+
+public class Sale {
+    private double value;
+    private String name, productName, clientName,  employeeName;
+    private int idSale;
+    
+    
+
+    public Sale(double value, String name, String productName, String clientName, String employeeName, int idSale) {
+		super();
+		this.value = value;
+		this.name = name;
+		this.productName = productName;
+		this.clientName = clientName;
+		this.employeeName = employeeName;
+		this.idSale = idSale;
+	}
+
+	public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getIdSale() {
+        return idSale;
+    }
+
+    public void setIdSale(int idSale) {
+        this.idSale = idSale;
+    }
+
+    public double getValue() {
+        return value;
+    }
+
+    public void setValorFinal(double valorFinal) {
+        this.value = valorFinal;
+    }
+
+    public String getNomeLente() {
+        return productName;
+    }
+
+    public void setNomeLente(String productName) {
+        this.productName = productName;
+    }
+
+    public String getNomeCliente() {
+        return clientName;
+    }
+
+    public void setNomeCliente(String nomeCliente) {
+        this.clientName = nomeCliente;
+    }
+
+
+
+    public String getNomeFuncionario() {
+        return employeeName;
+    }
+
+    public void setNomeFuncionario(String nomeFuncionario) {
+        this.employeeName = nomeFuncionario;
+    }
+
+    
+
+    // metodo de busca
+    public boolean buscaVendaID(int vendaidbuscado) {
+
+        if (idSale == vendaidbuscado)
+            return true;
+        else
+            return false;
+    }
+
+}

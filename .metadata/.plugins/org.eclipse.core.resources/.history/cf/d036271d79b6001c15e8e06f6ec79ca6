@@ -1,0 +1,31 @@
+package model;
+
+public class Employee extends Person {
+	private double salary;
+	private String address;
+
+	public Employee(String name,String address, double salary,String cPF, int numID,Telefone numTel) {
+		super(name, numID, cPF, numTel);
+		this.salary = salary;
+		this.address = address;
+	}
+
+	public double getSalario() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public String getEndereco() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	} 
+
+	
+	
+}

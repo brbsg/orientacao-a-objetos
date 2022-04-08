@@ -1,0 +1,149 @@
+package view;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import javax.swing.event.*;
+import controle.*;
+
+public class TelaPessoa implements ActionListener, ListSelectionListener {
+	private JFrame window;
+	private JLabel title;
+	private JButton registerClient;
+	private JButton refreshClient;
+	private JButton registerEmployee;
+	private JButton refreshEmployee;
+	
+	private static ControleDados dados;
+	private JList<String> registeredClients;
+	private JList<String> listaFuncionariosCadastrados;
+	private String[] listaNomes = new String[50];
+
+	public void mostrarDados(ControleDados d, int op) {
+		dados = d;
+
+		switch (op) {
+			case 1:// Mostrar dados de alunos cadastrados (JList)
+				listaNomes = new ControleCliente(dados).getNomeCliente();
+				registeredClients = new JList<String>(listaNomes);
+				
+				window = new JFrame("Clientes");
+				title = new JLabel("Clientes Cadastrados");
+				registerClient = new JButton("Cadastrar");
+				refreshClient = new JButton("Refresh");
+
+				title.setFont(new Font("Arial", Font.BOLD, 20));
+				title.setForeground(Color.WHITE);
+				title.setBounds(90, 10, 250, 30);
+				
+				registeredClients.setBounds(20, 50, 350, 250);
+				registeredClients.setBackground(Color.WHITE);
+				registeredClients.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+				registeredClients.setVisibleRowCount(10);
+
+				registerClient.setBounds(70, 320, 100, 30);
+				refreshClient.setBounds(200, 320, 100, 30);
+
+				window.setLayout(null);
+				window.getContentPane().setBackground(Color.DARK_GRAY);
+
+				window.add(title);
+				window.add(registeredClients);
+				window.add(registerClient);
+				window.add(refreshClient);
+
+				window.setSize(400, 420);
+				window.setVisible(true);
+				window.setLocationRelativeTo(null);
+				window.setResizable(false);
+
+				registerClient.addActionListener(this);
+				refreshClient.addActionListener(this);
+				registeredClients.addListSelectionListener(this);
+
+				break;
+
+			case 2:// Mostrar dados de professores cadastrados (JList)
+
+				listaNomes = new ControleFuncionario(dados).getNomeProf();
+				listaFuncionariosCadastrados = new JList<String>(listaNomes);
+				window = new JFrame("Funcionarios");
+				title = new JLabel("Funcionarios Cadastrados");
+				registerEmployee = new JButton("Cadastrar");
+				refreshEmployee = new JButton("Refresh");
+
+				title.setFont(new Font("Arial", Font.BOLD, 20));
+				title.setForeground(Color.WHITE);
+				title.setBounds(90, 10, 250, 30);
+				listaFuncionariosCadastrados.setBounds(20, 50, 350, 250);
+				listaFuncionariosCadastrados.setBackground(Color.WHITE);
+				listaFuncionariosCadastrados.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+				listaFuncionariosCadastrados.setVisibleRowCount(10);
+
+				registerEmployee.setBounds(70, 320, 100, 30);
+				refreshEmployee.setBounds(200, 320, 100, 30);
+
+				window.setLayout(null);
+				window.getContentPane().setBackground(Color.DARK_GRAY);
+
+				window.add(title);
+				window.add(listaFuncionariosCadastrados);
+				window.add(registerEmployee);
+				window.add(refreshEmployee);
+
+				window.setSize(400, 420);
+				window.setVisible(true);
+				window.setResizable(false);
+				window.setLocationRelativeTo(null);
+
+				registerEmployee.addActionListener(this);
+				refreshEmployee.addActionListener(this);
+				listaFuncionariosCadastrados.addListSelectionListener(this);
+				break;
+
+			default:
+				JOptionPane.showMessageDialog(null, "Opcao nao encontrada!", null, JOptionPane.ERROR_MESSAGE);
+		}
+
+	}
+
+	// Captura eventos relacionados aos botoes da interface
+	public void actionPerformed(ActionEvent e) {
+		Object src = e.getSource();
+
+		// Cadastro de novo aluno
+		if (src == registerClient)
+			new TelaDetalhePessoa().inserirEditar(1, dados, this, 0);
+
+		// Cadastro de novo professor
+		if (src == registerEmployee)
+			new TelaDetalhePessoa().inserirEditar(2, dados, this, 0);
+
+		// Atualiza a lista de nomes de alunos mostrada no JList
+		if (src == refreshClient) {
+			registeredClients.setListData(new ControleCliente(dados).getNomeCliente());
+			registeredClients.updateUI();
+		}
+
+		// Atualiza a lista de nomes de professores mostrada no JList
+		if (src == refreshEmployee) {
+			listaFuncionariosCadastrados.setListData(new ControleFuncionario(dados).getNomeProf());
+			listaFuncionariosCadastrados.updateUI();
+		}
+
+	}
+
+	// Captura eventos relacionados ao JList
+	public void valueChanged(ListSelectionEvent e) {
+		Object src = e.getSource();
+
+		if (e.getValueIsAdjusting() && src == registeredClients) {
+			new TelaDetalhePessoa().inserirEditar(3, dados, this, registeredClients.getSelectedIndex());
+		}
+
+		if (e.getValueIsAdjusting() && src == listaFuncionariosCadastrados) {
+			new TelaDetalhePessoa().inserirEditar(4, dados, this, listaFuncionariosCadastrados.getSelectedIndex());
+		}
+	}
+
+}

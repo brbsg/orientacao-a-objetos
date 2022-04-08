@@ -1,0 +1,193 @@
+package modelo;
+
+//import java.util.*;
+
+public class Data {
+	// private ArrayList<Loja> lojas = new ArrayList<Loja>();
+	private Client[] clients = new Client[50];
+	private int amountOfClients = 0;
+	private Employee[] employee = new Employee[50];
+	private int amountOfEmployees = 0;
+	private Armacao[] armacao = new Armacao[50];
+	private int qtdArmacao = 0;
+	private Telefone[] tels = new Telefone[50];
+	private int qtdTels = 0;
+	private Store[] store = new Store[5];
+	private int amountOfStores = 0;
+	private Lente[] lentes = new Lente[50];
+	private int qntLentes;
+	private Sale[] sales = new Sale[50];
+	private int amountOfSales;
+
+	public void fillWithSomeData() {
+		for (int i = 0; i < 5; i++) {
+			tels[i] = new Telefone((i + 1) * 10, (i + 1) * 100000001);
+			clients[i] = new Client("Cliente" + i, "Endereco" + i, "01/0" + (i + 1) + "/2001", (i + 1) * 123456,
+					(i + 1) + "1234567899", tels[i]);
+			employee[i] = new Employee("Funcionario" + i, "Endereco" + i, (i + 1) * 1000, "1234567899" + (i + 1),
+					(i + 1) * 332211, tels[i]);
+			armacao[i] = new Armacao("Armacao" + i, "Marca" + i, "Material" + i, (i + 1) * 50, (i + 1) * 10,
+					(i + 1) * 654321);
+			lentes[i] = new Lente((i + 1) * 0.1, 50.0 * (i + 1), i + 1, "redonda", "hipermetropia", "monofocal", "hoya",
+					true, "03/07/2025", (i + 1) * 654321, "lente" + (i));
+			sales[i] = new Sale(500 * i, "Cliente" + i, "Funcionario" + i, "Armacao" + i, "venda" + (i + 1),
+					"lente" + (i), i + 1);
+		}
+
+		store[0] = new Store("oticas wanderer", "endereco 1 rua 2", 87654321, new Telefone(61, 555555555));
+
+		amountOfClients = 5;
+		amountOfEmployees = 5;
+		qtdArmacao = 5;
+		qtdTels = 5;
+		amountOfStores = 1;
+		qntLentes = 5;
+
+	}
+
+	public Client[] getClientes() {
+		return clients;
+	}
+
+	public void setClientes(Client[] clientes) {
+		this.clients = clientes;
+	}
+
+	public void insertClient(Client c, int pos) {
+		this.clients[pos] = c;
+		if (pos == amountOfClients)
+			amountOfClients++;
+	}
+
+	public int getAmountOfClients() {
+		return amountOfClients;
+	}
+
+	public void setAmountOfClients(int amountOfClients) {
+		this.amountOfClients = amountOfClients;
+	}
+
+	public Employee[] getEmployees() {
+		return employee;
+	}
+
+	public void setEmployees(Employee[] employee) {
+		this.employee = employee;
+	}
+
+	public void insertEmployee(Employee p, int pos) {
+		this.employee[pos] = p;
+		if (pos == amountOfEmployees)
+			amountOfEmployees++;
+	}
+
+	public int getQtdFuncionarios() {
+		return amountOfEmployees;
+	}
+
+	public void setQtdFuncionarios(int qtdFuncionarios) {
+		this.amountOfEmployees = qtdFuncionarios;
+	}
+
+	public Armacao[] getArmacao() {
+		return armacao;
+	}
+
+	public void setArmacao(Armacao[] armacoes) {
+		this.armacao = armacoes;
+	}
+
+	public void inserirEditarArmacao(Armacao a, int pos) {
+		this.armacao[pos] = a;
+		if (pos == qtdArmacao)
+			qtdArmacao++;
+	}
+
+	public int getQtdArmacao() {
+		return qtdArmacao;
+	}
+
+	public void setQtdArmacao(int qtdArmacoes) {
+		this.qtdArmacao = qtdArmacoes;
+	}
+
+	public Telefone[] getTels() {
+		return tels;
+	}
+
+	public void setTels(Telefone[] tels) {
+		this.tels = tels;
+	}
+
+	public int getQtdTels() {
+		return qtdTels;
+	}
+
+	public void setQtdTels(int qtdTels) {
+		this.qtdTels = qtdTels;
+	}
+
+	public Store[] getLoja() {
+		return store;
+	}
+
+	public void setStore(Store[] loja) {
+		this.store = loja;
+	}
+
+	public int getAmountOfStores() {
+		return amountOfStores;
+	}
+
+	public void setAmountOfStores(int amountOfStores) {
+		this.amountOfStores = amountOfStores;
+	}
+
+	public void insertStore(Store l, int pos) {
+		this.store[pos] = l;
+		if (pos == amountOfStores) {
+			amountOfStores++;
+		}
+	}
+
+	public Lente[] getLentes() {
+		return lentes;
+	}
+
+	public void setLentes(Lente[] lentes) {
+		this.lentes = lentes;
+	}
+
+	public int getQntLentes() {
+		return qntLentes;
+	}
+
+	public void setQntLentes(int qntLentes) {
+		this.qntLentes = qntLentes;
+	}
+
+	public void inserirEditarlente(Lente l, int parseInt) {
+		this.lentes[parseInt] = l;
+		if (parseInt == qntLentes)
+			qntLentes++;
+	}
+
+	public void setAmountOfSales(int amountOfSales) {
+		this.amountOfSales = amountOfSales;
+	}
+
+	public int getAmountOfSales() {
+		return amountOfSales;
+	}
+
+	public Sale[] getSales() {
+		return sales;
+	}
+
+	public void insertSale(Sale v, int parseInt) {
+		this.sales[parseInt] = v;
+		if (parseInt == amountOfSales)
+			amountOfSales++;
+	}
+
+}
