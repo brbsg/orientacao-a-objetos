@@ -2,11 +2,6 @@ package model;
 
 //import java.util.*;
 
-/**
- * Armazenar todos os dados da aplicação
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public class Data {
 	// private ArrayList<Loja> lojas = new ArrayList<Loja>();
 	private Client[] clients = new Client[50];
@@ -23,15 +18,6 @@ public class Data {
 	private Sale[] sales = new Sale[50];
 	private int amountOfSales;
 
-	/**
-	 * Gera numeros aleatórios ao entrar no aplicativo
-	 * @param name
-	 * @param endereco
-	 * @param dataPrimC
-	 * @param numID
-	 * @param cPF
-	 * @param numTel
-	 */
 	public void fillWithSomeData() {
 		amountOfClients = 5;
 		amountOfEmployees = 5;
@@ -86,11 +72,6 @@ public class Data {
 		this.employee = employee;
 	}
 
-	/**
-	 * Cadastrar o cliente
-	 * @param c
-	 * @param pos
-	 */
 	public void insertEmployee(Employee p, int pos) {
 		this.employee[pos] = p;
 		if (pos == amountOfEmployees)
@@ -138,11 +119,6 @@ public class Data {
 		this.amountOfStores = amountOfStores;
 	}
 
-	/**
-	 * Cadastrar a loja
-	 * @param c
-	 * @param pos
-	 */
 	public void insertStore(Store l, int pos) {
 		this.store[pos] = l;
 		if (pos == amountOfStores) {
@@ -166,11 +142,6 @@ public class Data {
 		this.amountOfPurses = qntLentes;
 	}
 
-	/**
-	 * Cadastrar a Bolsa
-	 * @param c
-	 * @param pos
-	 */
 	public void insertPurse(Purse purse, int parseInt) {
 		this.purse[parseInt] = purse;
 		if (parseInt == amountOfPurses)

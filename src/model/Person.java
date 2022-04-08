@@ -1,23 +1,11 @@
 package model;
 
-/**
- * Classe-pai de funcionario/cliente
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public abstract class Person {
 	protected String name;
 	protected int numID;
 	protected String CPF;
 	protected Telefone numTel;
 	
-	/**
-	 * Constructor de Person
-	 * @param name
-	 * @param numID
-	 * @param cPF
-	 * @param numTel
-	 */
 	public Person(String name, int numID, String cPF, Telefone numTel) {
 		super();
 		this.name = name;
@@ -50,11 +38,6 @@ public abstract class Person {
 		CPF = cPF;
 	}
 
-	/**
-	 * Vai validar o CPF que o usuario colocar
-	 * @param cpf
-	 * @return verdadeiro ou falso
-	 */
 	public Boolean validaCpf(String cpf) {
 		if (cpf.length() == 11 && !CPF.equals("00000000000") && !CPF.equals("11111111111") && !CPF.equals("22222222222")
 				&& !CPF.equals("33333333333") && !CPF.equals("44444444444") && !CPF.equals("55555555555")

@@ -1,10 +1,5 @@
 package model;
 
-/**
- * Classe-pai de todos os objetos de venda da loja
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public abstract class Product {
 	private int idProduto;
 	private String nome;
@@ -14,16 +9,8 @@ public abstract class Product {
 	private String tamanho;
 	private int preco;
 	
-	/**
-	 * Definir os parametros de Product
-	 * @param idProduto
-	 * @param nome
-	 * @param cor
-	 * @param categoria
-	 * @param marca
-	 * @param tamanho
-	 * @param preco
-	 */
+	
+
 	public Product(int idProduto, String nome, String cor, String categoria, String marca, String tamanho, int preco) {
 		super();
 		this.idProduto = idProduto;

@@ -1,24 +1,13 @@
 package model;
 
-/**
- * Classe-pai de tudo que envolve o cadastro
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public class Sale {
 	private int idSale;
     private int value;
     private String name, productName, clientName,  employeeName;
     
-    /**
-     * Constructor da venda
-     * @param idSale
-     * @param clientName
-     * @param employeeName
-     * @param name
-     * @param productName
-     * @param value
-     */
+    
+    
+
     public Sale(int idSale, String clientName, String employeeName,  String name, String productName, int value) {
 		super();
 		this.value = value;
@@ -77,11 +66,9 @@ public class Sale {
         this.employeeName = employeeName;
     }
 
-    /**
-     * Buscador
-     * @param vendaidbuscado
-     * @return
-     */
+    
+
+    // metodo de busca
     public boolean buscaVendaID(int vendaidbuscado) {
 
         if (idSale == vendaidbuscado)

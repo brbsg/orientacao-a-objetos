@@ -1,11 +1,6 @@
 package controller;
 import model.*;
 
-/**
- * Controlador de client
- * @author Lucas & Gustavo
- * @version 1.0 (Abril 2022)
- */
 public class ClientController {
 	private Client[] c;
 	private int amountOfClients;

@@ -2,11 +2,6 @@ package controller;
 
 import model.Sale;
 
-/**
- * Controlador de Venda
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public class SaleController {
 
     private Sale[] vendas;

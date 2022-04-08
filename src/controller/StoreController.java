@@ -3,11 +3,6 @@ package controller;
 import model.Store;
 import model.Telefone;
 
-/**
- * Controlador de Loja
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public class StoreController {
     private Store[] lControl;
     private int qntLojas;

@@ -2,11 +2,6 @@ package controller;
 
 import model.*;
 
-/**
- * Controlador de Data 
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public class DataController {
 	private Data d = new Data();
 
@@ -47,11 +42,6 @@ public class DataController {
 		return this.d.setStore();
 	}
 
-	/**
-	 * Cadastrar ou editar funcionarios 
-	 * @param dadosFuncionarios
-	 * @return Verdadeiro ou Falso
-	 */
 	public boolean inserirEditarFuncionarios(String[] dadosFuncionarios) {
 		if (!dadosFuncionarios[3].matches("[0-9]+") || !dadosFuncionarios[4].matches("[0-9]+")
 				|| !dadosFuncionarios[5].matches("[0-9]+") || !dadosFuncionarios[6].matches("[0-9]+")) {
@@ -75,11 +65,6 @@ public class DataController {
 		}
 	}
 
-	/**
-	 * Cadastrar ou editar clientes
-	 * @param dadosClientes
-	 * @return Verdadeiro ou Falso
-	 */
 	public boolean inserirEditarClientes(String[] dadosClientes) {
 		if (!dadosClientes[4].matches("[0-9]+") || !dadosClientes[5].matches("[0-9]+")
 				|| !dadosClientes[6].matches("[0-9]+")) {
@@ -104,11 +89,7 @@ public class DataController {
 	}
 
 	
-	/**
-	 * Removedor de Clientes indesejados
-	 * @param i
-	 * @return Verdadeiro
-	 */
+
 	public boolean removerCliente(int i) {
 
 		String clienteRemovido = d.getClientes()[i].getName();
@@ -133,11 +114,6 @@ public class DataController {
 		}
 	}
 
-	/**
-	 * Removedor de Funcionarios indesejados
-	 * @param i
-	 * @return Verdadeiro
-	 */
 	public boolean removerFuncionarios(int i) {
 
 		String funcionarioRemovido = d.getEmployees()[i].getName();
@@ -162,11 +138,7 @@ public class DataController {
 	}
 
 	
-	/**
-	 * Cadastrar ou editar clientes
-	 * @param novoDado
-	 * @return Verdadeiro ou Falso
-	 */
+
 	public boolean inserirEditarLojas(String[] novoDado) {
 		if (!novoDado[3].matches("[0-9]+") || !novoDado[4].matches("[0-9]+") || !novoDado[5].matches("[0-9]+")) {
 			return false;
@@ -193,11 +165,6 @@ public class DataController {
 		return this.d.getPurse();
 	}
 
-	/**
-	 * Cadastrar ou editar Bolsa
-	 * @param novoDado
-	 * @return Verdadeiro ou Falso
-	 */
 	public boolean insertPurse(String[] novoDado) {
 		if (!novoDado[1].matches("[0-9]+") || !novoDado[7].matches("[0-9.]+") ) {
 			System.out.println(novoDado[7]);
@@ -213,11 +180,6 @@ public class DataController {
 
 	}
 
-	/**
-	 * Remover Bolsa
-	 * @param novoDado
-	 * @return Verdadeiro ou Falso
-	 */
 	public boolean removePurse(int i) {
 		String removedPurse = d.getPurse()[i].getNome();
 

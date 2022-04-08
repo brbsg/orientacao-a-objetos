@@ -2,11 +2,6 @@ package controller;
 
 import model.*;
 
-/**
- * Controlador de Funcionario
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public class EmployeeController {
 	private Employee[] p;
 	private int qtdFuncionarios;

@@ -1,10 +1,5 @@
 package model;
 
-/**
- * Classe-pai da Loja
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public class Store {
 
     private String nomeLoja;
@@ -44,13 +39,6 @@ public class Store {
         this.telefone = telefone;
     }
 
-    /**
-     * Controlador de Loja
-     * @param nomeLoja
-     * @param endereco
-     * @param cep
-     * @param telefone
-     */
     public Store(String nomeLoja, String endereco, int cep, Telefone telefone) {
         this.nomeLoja = nomeLoja;
         this.endereco = endereco;

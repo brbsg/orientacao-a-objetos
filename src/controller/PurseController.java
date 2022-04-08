@@ -2,11 +2,6 @@ package controller;
 
 import model.Purse;
 
-/**
- * Controlador da Bolsa
- * @author Lucas & Gustavo
- * @version 1.0 (abril 2022)
- */
 public class PurseController {
     private Purse[] purse;
     private int amountOfPurses;
